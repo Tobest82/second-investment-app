@@ -17,20 +17,17 @@ app.use(express.urlencoded({ extended: true }));
 // routes
 app.use(authRoutes);
 
-// test route
-// app.get("/", (req, res) => {
+const PORT = process.env.PORT || 3000;
 
-//   res.send("route working");
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+
+// app.listen(3000, () => {
+
+//   console.log("Server running on port 3000");
 
 // });
-
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
-
-app.listen(3000, () => {
-
-  console.log("Server running on port 3000");
-
-});
 
 console.log("SERVER STARTED");
